@@ -1,0 +1,155 @@
+html {
+  height: 100%;
+  width: 100%;
+}
+
+.img-izq { 
+  width: 45%; 
+  height: auto; 
+  max-width: 180px;
+  min-height: 15vh;
+  max-height: 228px;
+  position: absolute;
+  top: 5vh;
+  left: 0;
+}
+ 
+.img-der { 
+  width: 45%;
+  height: auto;
+  max-width: 180px;
+  min-height: 15vh;
+  max-height: 228px;
+  position: absolute;
+  top: 5vh;
+  right: 0;
+}
+
+.img-corona {
+  width: 75%;
+  margin-top: 50px;
+}
+
+.img-quincenera{
+  max-width: 100%;
+  max-height:100%;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+
+
+
+.countdown-container { 
+  display: flex;
+  
+.countdown {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  flex-wrap: wrap;
+}
+
+.countdown div {
+  padding: 10px;
+}
+
+p {
+  display: grid;
+  place-items: center;
+  height: 40px;
+  width: 40px;
+  border-radius: 30%;
+  color: #fff;
+  font-size: 1rem;
+  font-weight: bold;
+  background-color: #4ca4e4;
+}
+
+span {
+  display: block;
+  padding: 1px;
+  text-align: center;
+  color: #2065c1;
+  font-size: .75rem;
+  font-weight: 300;
+  }
+}
+
+.img-maret3 { 
+  width: 55%;
+}
+
+.img-rosas{
+  width: 35%;
+}
+
+.img-flores{
+  width: 35%;
+}
+
+.img-recepcion{
+  width: 55%;
+}
+
+.img-cv{
+  width: 25%;
+}
+
+.btn1 {
+  border: none;
+  place-items: center;
+  padding: 10px 20px;
+  color: #fff;
+  font-size: 1rem;
+  font-weight: bold;
+  background-color: #4ca4e4;
+  border-radius: 50px;
+
+}
+
+.btn2 {
+  border: none;
+  place-items: center;
+  border-radius: 10%;
+  padding: 10px 20px;
+  color: #fff;
+  font-size: 1rem;
+  font-weight: bold;
+  background-color: #4ca4e4;
+  border-radius: 50px;
+}
+
+.btn3 {
+  border: none;
+  place-items: center;
+  padding: 10px 20px;
+  border-radius: 10%;
+  color: #fff;
+  font-size: 1rem;
+  font-weight: bold;
+  background-color: #4ca4e4;
+  border-radius: 50px;
+
+}
+
+.img-principal{
+  height: 100%;
+  width: 100%;
+}
+
+.btnp {
+  position: relative;
+  left: 0;
+  top: 20%;
+  border: none;
+  padding: 10px 20px;
+  color: #4984AE;
+  font-size: 1rem;
+  font-weight: bold;
+  background-color: #fff;
+  display: inline-block;
+  border-radius: 50px;
+}
