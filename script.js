@@ -9,7 +9,7 @@ const countdownDate = new Date().getTime();
 
 let interval = setInterval(function(){
     //Obtener fecha actual y milisegundos
-    const now = new Date().getTime();
+    const now = new Date('00 00, 0000 00:00:00')).getTime();
 
     //Obtener las distancias entre ambas fechas
     let distance = countdownDate - now;
