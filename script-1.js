@@ -5,11 +5,11 @@ $seconds = document.getElementById('seconds'),
 $finalMessage = document.querySelector('.final-sms');
 
 //Fecha a futuro
-const countdownDate = new Date('00 00, 0000 00:00:00').getTime();
+const countdownDate = new Date().getTime();
 
 let interval = setInterval(function(){
     //Obtener fecha actual y milisegundos
-    const now = new Date().getTime();
+    const now = new Date('00 00, 0000 00:00:00')).getTime();
 
     //Obtener las distancias entre ambas fechas
     let distance = countdownDate - now;
@@ -32,4 +32,3 @@ let interval = setInterval(function(){
         $finalMessage.style.transform = 'translateY(0)';
     }
 }, 1000);
-
