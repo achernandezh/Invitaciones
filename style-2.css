@@ -128,12 +128,8 @@ p {
 }
 
 
-ul {
-  list-style: none; /* Quita los puntos por defecto */
-  padding-left: 30px;
-}
-
 li {
+  list-style: none;
   text-align: center;
   font-family: "Gloria Hallelujah", cursive;
   font-weight: 400;
