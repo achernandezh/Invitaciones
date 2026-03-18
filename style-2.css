@@ -29,7 +29,7 @@ h1 {
   display: block;
   margin-left: auto;
   margin-right: auto;
-  width: 80%; /* Oel tamaño que necesites */
+  width: 100%; /* Oel tamaño que necesites */
   position: center;
   height: auto;    /* La altura se ajusta proporcionalmente */
 }
