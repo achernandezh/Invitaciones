@@ -3,23 +3,99 @@ html {
   width: 100%;
 }
 
-body {
-  background-image: url('Images/background5.png');
-  background-size: cover;        
-  background-position: center;   
-  background-repeat: no-repeat;  
-  background-attachment: fixed;  
-  height: 100vh;                 
-  margin: 0;
-  margin-bottom: 50px;
+.video-background {
+  position: fixed;
+  right: 0;
+  bottom: 0;
+  min-width: 100%;
+  min-height: 100%;
+  z-index: -1;
+  overflow: hidden;
 }
 
-h1 {
+.video-background video {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  min-width: 100%;
+  min-height: 100%;
+  object-fit: cover; /* Asegura que cubra todo */
+}
+
+.content {
+  position: relative;
+  z-index: 1; /* Por encima del video */
+  color: white;
   text-align: center;
-  font-family: "Luckiest Guy", cursive;
-  font-weight: 400;
+}
+
+
+@font-face {
+  font-family: 'WaltDisney';
+  src: url('fonts/waltograph/waltograph42.ttf') format('opentype'); /* Ajusta el nombre del archivo */
+  font-weight: normal;
   font-style: normal;
-  color: #f4d14b;
+}
+
+@font-face {
+  font-family: 'Moanas';
+  src: url('fonts/moanas/Moanas.ttf') format('opentype'); /* Ajusta el nombre del archivo */
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Angelina';
+  src: url('fonts/angelina/angelina.regular.ttf') format('opentype'); /* Ajusta el nombre del archivo */
+  font-weight: normal;
+  font-style: normal;
+}
+
+
+#disney-text {
+  font-family: 'WaltDisney', cursive;
+  font-size: 45px;
+  font-weight: 200;
+  font-style: normal;
+  text-align: center;
+  color: #ffff;
+  text-shadow: 4px 4px #096377
+
+}
+
+#moana-text {
+  font-family: 'Moanas';
+  font-size: 45px;
+  font-weight: 200;
+  font-style: normal;
+  text-align: center;
+  color: #ffff;
+  text-shadow: 4px 4px #096377
+}
+
+#recepcion-text {
+  font-family: 'WaltDisney', cursive;
+  font-size: 65px;
+  font-weight: 200;
+  font-style: normal;
+  text-align: center;
+  color:  #ff751f;
+  -webkit-text-stroke: 1.5px #ffff;
+  /* text-shadow: 2px 2px 2px  #899e37; */
+}
+
+path {
+  fill: transparent;
+}
+
+text {
+  font-family: 'Angelina';
+  font-size: 28px;
+  font-weight: 200;
+  font-style: normal;
+  text-align: center;
+  fill: #ffff;
   font-size: 45px;
   text-shadow: 3px 3px 3px #e73c93;
 }
@@ -29,85 +105,116 @@ h1 {
   display: block;
   margin-left: auto;
   margin-right: auto;
-  width: 100%; /* Oel tamaño que necesites */
+  width: 70%; /* O el tamaño que necesites */
   position: center;
   height: auto;    /* La altura se ajusta proporcionalmente */
 }
 
-table {
-  width: 50%; /* O el ancho que desees, menor al 100% */
-  margin: 0 auto; /* Centra la tabla */
-  border-collapse: collapse;
-}
 
-
-#domingo {
-  font-family: "Holtwood One SC", serif;
+#acompananos {
+  text-align: center;
+  font-family: "Luckiest Guy", cursive;
   font-weight: 400;
   font-style: normal;
-  color: #e73c93;
+  font-style: normal;
+  color: #f623a4;
+  -webkit-text-stroke: 1.5px white;
   font-size: 25px;
-  font-style: normal;
-  -webkit-text-stroke: 1.5px white;
-  text-align: center;
-  padding: 15px;
-  border-right: 5px solid white; /* Solo borde izquierdo azul */
-}
-
-#tres {
-  font-family: "Holtwood One SC", serif;
-  font-weight: 400;
-  font-style: normal;
-  color: #e73c93;
-  font-size: 30px;
-  font-style: normal;
-  text-align: center;
-  -webkit-text-stroke: 1.5px white;
   padding: 15px;
 }
 
-#mayo {
-  text-align: center;
-  font-family: "Holtwood One SC", serif;
+#fecha {
+  font-family: "Luckiest Guy", cursive;
   font-weight: 400;
-  font-style: normal;
-  color: #e73c93;
-  font-size: 25px;
+  color: #f623a4;
+  font-size: 20px;
   font-style: normal;
   -webkit-text-stroke: 1.5px white;
-  border-left: 5px solid white; /* Solo borde izquierdo azul */
+  text-align: center;
   padding: 15px;
+  
+}
+
+
+#hora {
+  text-align: center;
+  font-family: "Luckiest Guy", cursive;
+  font-weight: 400;
+  font-style: normal;
+  color: #f623a4;
+  -webkit-text-stroke: 1.5px white;
+  font-size: 20px;
+  padding: 15px;
+}
+
+#coco{
+  text-align: center;
 }
 
 #domicilio {
-  
   text-align: center;
-  font-family: "Tinos", serif;
-  font-weight: 400;
+  font-family: "Luckiest Guy", cursive;
+  font-weight: 200;
   font-style: normal;
-  color: #2164c1;
+  color: #f623a4;;
+  -webkit-text-stroke: 1px #fff; 
   font-size: 20px;
   font-style: normal;
 }
-/* Línea gruesa, corta y centrada */
-.linea-estilizada {
-  border: 0;
-  height: 4px;
-  width: 50%;
-  background-color: rgb(255, 252, 252);
-  margin: 20px auto; /* Centra la línea */
+
+#nolvides {
+  text-align: center;
+  font-family: "Luckiest Guy", cursive;
+  font-weight: 200;
+  font-style: normal;
+  color: #096377;
+  -webkit-text-stroke: 1px #fff; 
+  font-size: 20px;
+  font-style: normal;
 }
 
-.imagen-paula {
+
+
+.imagen-dondeycuando {
   display: block;
   margin-left: auto;
   margin-right: auto;
-  width: 50%; /* O el tamaño que necesites */
+  width: 90%; /* O el tamaño que necesites */
   position: center;
   height: auto;    /* La altura se ajusta proporcionalmente */
 }
 
+
+#itinerario-text {
+  font-family: 'Moanas';
+  font-size: 35px;
+  font-style: normal;
+  text-align: center;
+  color: #fff;
+  text-shadow: 4px 4px #096377;
+}
+
+
+#sugerencias-text {
+  font-family: 'Moanas';
+  font-size: 35px;
+  font-style: normal;
+  text-align: center;
+  color: #fff;
+  text-shadow: 4px 4px #096377;
+}
+
 .imagen-cuatro {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 10%; /* O el tamaño que necesites */
+  position: center;
+  height: auto;    /* La altura se ajusta proporcionalmente */
+}
+
+.imagen-barco {
+  padding-top: 25px;
   display: block;
   margin-left: auto;
   margin-right: auto;
@@ -117,46 +224,80 @@ table {
 }
 
 
+
+#text-terraza{
+  font-family: 'Moanas';
+  font-size: 35px;
+  font-weight: 200;
+  font-style: normal;
+  text-align: center;
+  color: #ffff;
+  text-shadow: 4px 4px #096377
+}
+
 p {
-  font-family: "Gloria Hallelujah", cursive;
+  font-family: "Luckiest Guy", cursive;
   font-weight: 400;
   font-style: normal;
   text-align: center;
-  color: #e73c93;
-  font-size: 20px;
-  text-shadow: 3px 3px 3px #f2c3dc;
+  color: #f623a4;
+  font-size: 25px;
+  -webkit-text-stroke: 1.5px white;
 }
 
 
+
+
 li {
+  padding-top: 15px;
   list-style: none;
+  padding-left: 0;
   text-align: center;
-  font-family: "Gloria Hallelujah", cursive;
-  font-weight: 400;
+  font-family: "Luckiest Guy", cursive;
+  font-weight: 100;
   font-style: normal;
-  color: #e73c93;
+  color: #f623a4;
   font-size: 20px;
-  text-shadow: 3px 3px 3px #f2c3dc;
+  -webkit-text-stroke: 1.5px white;
 }
 
 tr:nth-child(even) {background-color: #f2f2f2;}
 
 .btn-liquid {
+  padding-inline: 20px;
   position: relative;
   display: flex;
   padding: 1rem 2rem;
   font-size: 1rem;
-  font-weight: 600;
-  color: #e73c93;
-  background-color: #fff;
-  border: 2px solid #e73c93;
-  border-radius: 8px;
+  font-weight: 100;
+  
+  background-color: #096377;
+  border-radius: 20px;
   cursor: pointer;
   overflow: hidden;
   transition: all 0.3s ease;
   display: flex;
   margin: 0 auto;
-  
+  font-family: 'Moanas';
+  font-style: normal;
+  text-align: center;
+  color: #ffff;
+  text-shadow: 4px 4px #096377;
+  border: 2px solid #fff;
+
   
 }
+
+
+.imagen-nofaltes {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 70%; /* O el tamaño que necesites */
+  position: center;
+  height: auto;    /* La altura se ajusta proporcionalmente */
+}
+
+
+
 
